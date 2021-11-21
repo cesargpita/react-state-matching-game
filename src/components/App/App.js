@@ -23,7 +23,7 @@ class App extends Component {
     this.setState((state) => ({
       ...state,
       playing: true,
-      tiles: createTiles(numtiles)
+      tiles: createTiles(state.numtiles)
     }));
   }
 
@@ -34,7 +34,7 @@ class App extends Component {
           Turbo-Matcher
         </header>
         <OptionsPanel playing={this.state.playing} numTiles={this.state.numTiles} startGame={() => this.startGame()} />
-        <Board tiles={this.state.tiles} />
+        <Board tiles={this.state.tiles} numTiles={this.state.numTiles} />
       </div>
     );
   }
