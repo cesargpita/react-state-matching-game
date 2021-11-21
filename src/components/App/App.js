@@ -57,7 +57,7 @@ class App extends Component {
     });
   }
 
-  handleNumTileChanged = (num) => {
+  handleNumTileChange = (num) => {
     this.setState((state) => ({
       numTiles: num,
       playing: false,
@@ -72,7 +72,8 @@ class App extends Component {
         <header className="App-header">
           Turbo-Matcher
         </header>
-        <OptionsPanel playing={this.state.playing} numTiles={this.state.numTiles} startGame={this.startGame} />
+        <OptionsPanel playing={this.state.playing} numTiles={this.state.numTiles} startGame={this.startGame}
+          handleNumTileChange={this.handleNumTileChange} />
         <Board tiles={this.state.tiles} numTiles={this.state.numTiles} />
       </div>
     );
