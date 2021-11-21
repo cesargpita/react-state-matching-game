@@ -10,6 +10,7 @@ const Board = (props) => {
     gridTemplateRows: `repeat(${Math.sqrt(props.numTiles)}, 1fr)`,
   }
 
+  console.log(props.tiles)
 
   return (
     <div className='Board' style={gridConfig}>
